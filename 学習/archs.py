@@ -478,6 +478,7 @@ class NestedDPUNet(nn.Module):
         self.main0_4 = MainBranch(nb_filter[0]*4+nb_filter[1], nb_filter[0], nb_filter[0])
         self.ref0_4  = RefrainBranch(nb_filter[1], nb_filter[0], nb_filter[0])
 
+        # Feature Pyramid Network(FPN)
         if self.deep_supervision:
             self.upf0 = nn.Upsample(scale_factor=2**(len(nb_filter)-1), mode='bilinear', align_corners=True)
             self.upf1 = nn.Upsample(scale_factor=2**(len(nb_filter)-2), mode='bilinear', align_corners=True)
@@ -494,7 +495,7 @@ class NestedDPUNet(nn.Module):
             self.final3 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
             self.final4 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
             self.final5 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
-
+        # FPNなし
         else:
             self.final = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
 
