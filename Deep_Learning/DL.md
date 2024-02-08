@@ -14,7 +14,7 @@
 ・preprocess_dsb2018.py：デモ用プログラム？(マジで使わん)<br>
 
 ## trainのデータセット
-・フォルダ名やフォルダの場所は**必ず**下の例と同一にする
+・フォルダ名やフォルダの場所は**必ず**下の例と同一にする<br>
 ・入力画像(images)とラベル画像(masks)の画像ファイルの名前は、**必ず**一致させる<br>
 ・masksの画像フォルダの数はクラス数と一致させる(ex：class_num=1の場合、フォルダは「0」のみ)
 ```bash
@@ -42,6 +42,7 @@ inputs
 ```bash
 python train.py --dataset ~/inputs/datasets/path --arch Network Name -b batch size --num_classes クラス数(default:1)
 ```
+
 
 
 
