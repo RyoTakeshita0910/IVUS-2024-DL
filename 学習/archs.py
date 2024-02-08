@@ -135,7 +135,7 @@ class NestedUNet(nn.Module):
             return output
 
 
-# 本研究のネットワーク
+# 本研究のネットワーク：7層U-Net++
 class NestedUNet7(nn.Module):
     def __init__(self, num_classes, input_channels=3, deep_supervision=False, **kwargs):
         super().__init__()
@@ -192,6 +192,7 @@ class NestedUNet7(nn.Module):
 
         self.conv0_7 = VGGBlock(nb_filter[0]*7+nb_filter[1], nb_filter[0], nb_filter[0], 3)
 
+        # Deep supervision
         if self.deep_supervision:
             self.final1 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
             self.final2 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
@@ -200,6 +201,7 @@ class NestedUNet7(nn.Module):
             self.final5 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
             self.final6 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
             self.final7 = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
+        # Deep supervisionなし
         else:
             self.final = nn.Conv2d(nb_filter[0], num_classes, kernel_size=1)
 
