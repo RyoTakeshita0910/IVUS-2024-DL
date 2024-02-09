@@ -1,4 +1,4 @@
-name: ivus-2024
+name: ivus-2024-DL
 channels:
   - defaults
 dependencies:
