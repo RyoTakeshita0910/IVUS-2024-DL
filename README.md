@@ -13,6 +13,13 @@
 ・utils.py：関数<br>
 ・preprocess_dsb2018.py：デモ用プログラム？(マジで使わん)<br>
 
+
+## 環境設定
+・anacondaの仮想環境の作成
+```bash
+conda env export > requirements.yaml
+```
+
 ## trainのデータセット
 ・フォルダ名やフォルダの場所は**必ず**下の例と同一にする<br>
 ・入力画像(images)とラベル画像(masks)の画像ファイルの名前は、**必ず**一致させる<br>
