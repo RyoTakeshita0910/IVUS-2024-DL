@@ -97,7 +97,7 @@ test_inputs
 ```
 
 ### testの実行方法
-・name：trainでの学習結果を保存したフォルダの名前<br>
+・name：modelsにある学習結果のフォルダの名前<br>
 ・input：テストで入力する画像のパス
 ```bash
 python val.py --name 学習済み重みの指定 --input ~/test/dataset/path
