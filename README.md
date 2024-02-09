@@ -62,7 +62,7 @@ inputs
 ・optimizer：最適化アルゴリズム(default：SGD)．必要であれば，引数を"Adam"にするとAdamに変更可能．<br>
 
 #### データごとの学習設定
-・Lumen：deep supervision あり
+・Lumen：deep supervision あり<br>
 ・Media,Wire,プラークの分類：deep supervisionなし
 
 ```bash
