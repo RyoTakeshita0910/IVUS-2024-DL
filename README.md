@@ -64,9 +64,6 @@ inputs
 ```bash
 python train.py --dataset inputs内の(dataset name) --arch Network Name(default:NestedUNet7) -b batch size(default:2) --num_classes クラス数(default:1)
 ```
-example：NestedUNet7を用いて，Lumen_datasetを学習する(Deep supervision)
-```bash
-python train.py 
 
 ### train後の処理
 ・modelsに学習結果が保存される．<br>
