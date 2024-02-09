@@ -49,7 +49,7 @@ inputs
 ## trainの実行方法
 ・dataset：inputs内のデータセット名を指定<br>
 ・arch：学習に用いるネットワークの名前を以下から指定<br>
-　UNet, NestedUNet, NestedUNet7, DPUNet, NestedDPUNet<br>
+　UNet, NestedUNet, NestedUNet7, DPUNet, NestedDPUNet<br><br>
 ・batch size：NestedUNet7を用いる際は**2**にする(変えたときにプラーク分類の精度が落ちたため)<br>
 ・num_classes：Lumen,Media,wireの学習では**1**, プラークの分類では**6**にする<br>
 ```bash
