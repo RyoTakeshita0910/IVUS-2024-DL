@@ -48,19 +48,36 @@ inputs
 ```
 
 ### trainの実行方法
+##### 必須のコマンドライン引数
 ・dataset：inputs内のデータセット名を指定<br>
 ・arch：学習に用いるネットワークの名前を以下から指定<br>
 　UNet, NestedUNet, NestedUNet7, DPUNet, NestedDPUNet<br><br>
 ・batch size：NestedUNet7を用いる際は**2**にする(変えたときにプラーク分類の精度が落ちたため)<br>
 ・num_classes：Lumen,Media,wireの学習では**1**, プラークの分類では**6**にする<br>
+
+##### 任意のコマンドライン引数
+・deep_supervision：**Deep supervision**という機能を搭載するかどうか<br>
+　引数を"True"にするとDeep supervisonを搭載<br>
+・epochs：エポック数(default:100)<br>
+・optimizer：最適化アルゴリズム(default：SGD)．必要であれば，引数を"Adam"にするとAdamに変更可能．<br>
+
 ```bash
 python train.py --dataset inputs内の(dataset name) --arch Network Name(default:NestedUNet7) -b batch size(default:2) --num_classes クラス数(default:1)
 ```
+example：NestedUNet7を用いて，Lumen_datasetを学習する(Deep supervision)
+```bash
+python train.py 
+
+### train後の処理
+・modelsに学習結果が保存される．<br>
+保存時のフォルダ名は，以下のようになる<br>
+・Deep supervisionを使用しない：(dataset_name)_(network_name)_woDS<br>
+・Deep supervisionを使用する：(dataset_name)_(network_name)_wDS<br>
 
 ## test
 ### testのデータセット
-・trainと同様のデータの配置にする<br>
-・masksには，テスト画像の正解マスクを保存．マスク画像は，正解と予測結果のDice係数を計算するために使用．
+・trainと同様のデータ配置にする<br>
+・masksにはテスト画像の正解マスクを保存．マスク画像は，正解と予測結果のDice係数を計算するために使用．
 ```bash
 test_inputs
 └── <dataset name>
