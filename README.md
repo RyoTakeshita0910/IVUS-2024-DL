@@ -1,5 +1,6 @@
 
 # 7layer-U-Net++
+![Fig2-1](https://github.com/RyoTakeshita0910/IVUS-2024-DL/assets/104045526/cb987f26-fc02-4c78-8617-40fef5edeff7)
 
 ### 主に使用するファイル
 ・arch.py：深層学習モデルのネットワーク構造<br>
