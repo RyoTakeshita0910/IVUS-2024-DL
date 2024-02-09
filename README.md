@@ -61,6 +61,10 @@ inputs
 ・epochs：エポック数(default:100)<br>
 ・optimizer：最適化アルゴリズム(default：SGD)．必要であれば，引数を"Adam"にするとAdamに変更可能．<br>
 
+#### データごとの学習設定
+・Lumen：deep supervision あり
+・Media,Wire,プラークの分類：deep supervisionなし
+
 ```bash
 python train.py --dataset inputs内の(dataset name) --arch Network Name(default:NestedUNet7) -b batch size(default:2) --num_classes クラス数(default:1)
 ```
