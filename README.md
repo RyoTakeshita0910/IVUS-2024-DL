@@ -48,14 +48,14 @@ inputs
 ```
 
 ### trainの実行方法
-##### 必須のコマンドライン引数
+#### 必須のコマンドライン引数
 ・dataset：inputs内のデータセット名を指定<br>
 ・arch：学習に用いるネットワークの名前を以下から指定<br>
 　UNet, NestedUNet, NestedUNet7, DPUNet, NestedDPUNet<br><br>
 ・batch size：NestedUNet7を用いる際は**2**にする(変えたときにプラーク分類の精度が落ちたため)<br>
 ・num_classes：Lumen,Media,wireの学習では**1**, プラークの分類では**6**にする<br>
 
-##### 任意のコマンドライン引数
+#### 任意のコマンドライン引数
 ・deep_supervision：**Deep supervision**という機能を搭載するかどうか<br>
 　引数を"True"にするとDeep supervisonを搭載<br>
 ・epochs：エポック数(default:100)<br>
