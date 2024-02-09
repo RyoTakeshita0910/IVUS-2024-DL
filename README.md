@@ -15,7 +15,8 @@
 
 
 ## 環境設定
-・anacondaの仮想環境の作成
+・anacondaの仮想環境の作成<br>
+・CUDA：ver10.0
 ```bash
 conda env export > requirements.yaml
 ```
@@ -49,11 +50,3 @@ inputs
 ```bash
 python train.py --dataset inputsフォルダ内の(datasets name) --arch Network Name(default:NestedUNet7) -b batch size(default:2) --num_classes クラス数(default:1)
 ```
-
-
-
-
-
-
-
-
