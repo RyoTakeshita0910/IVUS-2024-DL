@@ -40,7 +40,7 @@ inputs
 
 ## trainの実行方法
 ```bash
-python train.py --dataset ~/inputs/datasets/path --arch Network Name -b batch size --num_classes クラス数(default:1)
+python train.py --dataset inputsフォルダ内の(datasets name) --arch Network Name(default:NestedUNet7) -b batch size(default:2) --num_classes クラス数(default:1)
 ```
 
 

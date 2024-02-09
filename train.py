@@ -36,11 +36,11 @@ def parse_args():
                         help='model name: (default: arch+timestamp)')
     parser.add_argument('--epochs', default=100, type=int, metavar='N',
                         help='number of total epochs to run')
-    parser.add_argument('-b', '--batch_size', default=15, type=int,
-                        metavar='N', help='mini-batch size (default: 16)')
+    parser.add_argument('-b', '--batch_size', default=2, type=int,
+                        metavar='N', help='mini-batch size (default: 2)')
     
     # model
-    parser.add_argument('--arch', '-a', metavar='ARCH', default='NestedUNet',
+    parser.add_argument('--arch', '-a', metavar='ARCH', default='NestedUNet7',
                         choices=ARCH_NAMES,
                         help='model architecture: ' +
                         ' | '.join(ARCH_NAMES) +
