@@ -58,3 +58,32 @@ python train.py --dataset inputs内の(dataset name) --arch Network Name(default
 ```
 
 ## test
+### testのデータセット
+・trainと同様のデータの配置にする<br>
+・masksには，テスト画像の正解マスクを保存．マスク画像は，正解と予測結果のDice係数を計算するために使用．
+```bash
+test_inputs
+└── <dataset name>
+    ├── images
+    │   ├── xxx_00000x.png
+    │   ├── yyy_00000y.png
+    │   ├── ...
+    │
+    └── masks
+        ├── 0 
+        │   ├── xxx_00000x.png
+        │   ├── yyy_00000y.png
+        │   ├── ...
+        │   
+        ├── 1 
+        │   ├── xxx_00000x.png
+        │   ├── yyy_00000y.png
+        │   ├── ...
+
+```
+
+### testの実行方法
+・name：trainでの学習結果を保存したフォルダの名前<br>
+・input：テストで入力する画像のパス
+```bash
+python val.py --name 学習済み重みの指定 --input ~/test/dataset/path
