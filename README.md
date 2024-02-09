@@ -18,7 +18,7 @@
 ・anacondaの仮想環境の作成<br>
 ・CUDA：ver10.0
 ```bash
-conda env create > --file requirements.yaml
+conda env create --file requirements.yaml
 ```
 
 ## train
