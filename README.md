@@ -102,6 +102,10 @@ test_inputs
 
 ### testの実行方法
 ・name：modelsにある学習結果のフォルダの名前<br>
-・input：テストで入力する画像のパス
+・input：test_inputsの中にあるテスト用データセットのパスを指定
 ```bash
 python val.py --name 学習済み重みの指定 --input ~/test/dataset/path
+```
+
+### test後の処理
+・outputsに学習結果のフォルダ名で推論結果を保存
