@@ -110,3 +110,22 @@ python val.py --name 学習済み重みの指定 --input ~/test/dataset/path
 
 ### test後の処理
 ・outputsに学習結果のフォルダ名で推論結果を保存
+
+## シェルファイル(.sh)による実行
+シェルファイルによる実行の自動化
+
+・シェルファイルの中身
+```bash
+#!usr/bin/bash
+
+python train.py ~
+python train.py ~
+...
+
+pause
+```
+
+・シェルファイルの実行コマンド
+```bash
+sh (ファイル名).sh
+```
