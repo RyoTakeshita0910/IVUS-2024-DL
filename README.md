@@ -16,6 +16,11 @@
 
 
 ## 環境設定
+・ubuntuにおけるmountの方法
+```bash
+sudo mount -t nfs 10.1.1.46:z3pool/deeparea deeparea
+```
+
 ・anacondaの仮想環境の作成<br>
 ・CUDA：ver10.0
 ```bash
