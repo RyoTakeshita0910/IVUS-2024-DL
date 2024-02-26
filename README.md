@@ -1,6 +1,6 @@
 
-# 7layer-U-Net++
-<img src="https://github.com/RyoTakeshita0910/IVUS-2024-DL/assets/104045526/c57229c8-0b92-4ee3-931b-5fb376514643.png" width="500">
+# U-Net++
+[](<img src="https://github.com/RyoTakeshita0910/IVUS-2024-DL/assets/104045526/c57229c8-0b92-4ee3-931b-5fb376514643.png" width="500">)
 
 #### 主に使用するファイル
 ・arch.py：深層学習モデルのネットワーク構造<br>
